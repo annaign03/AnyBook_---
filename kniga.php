@@ -41,7 +41,6 @@
           <input name="search" type="search" class="form-control" placeholder="Поиск..." aria-label="Поиск">
         </form>
         <?php
-        if ($_COOKIE['user']!=''):
           $book_id = $_POST['book_id'];
           $mysql = new mysqli('std-mysql','std_1832_magazin','123456789','std_1832_magazin');
           $result = $mysql->query("SELECT * FROM `произведение` WHERE `id`= '$book_id'");
@@ -131,7 +130,7 @@
      </div>
    </div>
    
-  </div>  <?php endif; ?>
+  </div>
   <footer class="py-3 my-4">
     <ul class="nav justify-content-center border-bottom pb-  mb-3">
       <li class="nav-item"><a href="index.php" class="nav-link px-2 text-dark">Главная</a></li>
